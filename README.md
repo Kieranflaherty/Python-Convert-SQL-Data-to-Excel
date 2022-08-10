@@ -1,2 +1,5 @@
-# SQL-Archive-System
-An archive system which will extract daily data from SQL and send it to a specified location in a folder named with that days date
+# Python program to Extract SQL Data to Excel
+
+This is a Python program that runs off a scheduled task on a daily basis. It is used to connect to a SQL database and extract data based on predefined queries within the code. This then converts the data to a Pandas dataframe and transfers the data into a excel file. The excel file created has 8 sheets in total with 1 query for each sheet. These can be edited depending on your requirements. Once the excel file has been created it is then saved in a specified location. In this case I saved it in the same directory as the Python script however this can also be edited. The file is dated which allows an archive to be created.
+
+This program was developed for a client in a manufacturing environment on a factory line. There were 8 lines in total sending data to the SQL from the production equipment through Programmable Logic Controllers. The client wanted a daily update for each of the 8 lines on all data collected that day. This script queries each line for all data created that day and creates one sheet for each line in the SQL. This was scheduled to execute everyday at the end of the shift.
